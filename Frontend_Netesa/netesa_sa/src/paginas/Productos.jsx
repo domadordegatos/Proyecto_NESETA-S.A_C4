@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import { loadProductos } from "../server/server";
-import Select from 'react-select'
 
 function Productos() {
   const [listaProductos, setListaProductos] = useState([]);
+
   async function listProductos() {
     try {
       const res = await loadProductos();
@@ -46,7 +46,14 @@ function Productos() {
               <td>{productos.color}</td>
               <td>{productos.fIngreso}</td>
               <td>{productos.proveedor}</td>
-              <Select options={productos.disponibles}/>
+              <td>
+                <Form.Select>
+                  {productos.disponibles.map((disponible) => (
+                    <option>{disponible}</option>
+                  ))}
+                </Form.Select>
+              </td>
+
               <td>{productos.referencia}</td>
               <td>
                 <button className="btn btn-outline-warning btn-sm">
