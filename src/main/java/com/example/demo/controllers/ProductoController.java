@@ -30,7 +30,7 @@ public class ProductoController {
 
     @GetMapping(path = "/{id}")
     public Optional<ProductoModel> getProductoById(@PathVariable("id") String id){
-        return productoService.getpProductoById(id);
+        return productoService.getProductoById(id);
     }
 
     @PostMapping()
@@ -43,8 +43,8 @@ public class ProductoController {
         return productoService.deleteProductoById(id);
     }
 
-    @GetMapping(path = "/{nombre}")
+    /* @GetMapping(path = "/{nombre}")
     public Iterable<ProductoModel> buscarPorNombre(@PathVariable("nombre")String nombre){
         return productoService.getProductobyNombre(nombre);
-    }
+    } */
 }

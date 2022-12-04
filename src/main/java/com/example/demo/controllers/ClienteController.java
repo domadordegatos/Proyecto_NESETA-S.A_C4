@@ -18,8 +18,8 @@ import com.example.demo.services.ClientesService;
 
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/clientes")
+@CrossOrigin(origins = "*")
 public class ClienteController {
     @Autowired
     ClientesService clienteService;

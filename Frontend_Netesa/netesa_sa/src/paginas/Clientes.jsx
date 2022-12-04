@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Form from 'react-bootstrap/Form';
-import { findClientById, loadClientes, saveClient } from "../server/server";
-import { deleteClientById } from "../server/server";
+import { findClientById, loadClientes, saveClient, deleteClientById } from "../server/server";
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Swal from 'sweetalert2';
@@ -9,7 +8,6 @@ import Swal from 'sweetalert2';
 function Clientes() {
 
     const[cliente, setCliente]= useState({
-        id: "",
         nombre: "",
         nit: "",
         correo: "",
@@ -18,6 +16,7 @@ function Clientes() {
     })
 
     const [listaClientes, setListaClientes] = useState([])
+
     async function listClientes() {
         try {
             const res = await loadClientes();
@@ -41,14 +40,26 @@ function Clientes() {
     }
 
     async function guardarCliente() {
-        const res = await saveClient(cliente);
+        await saveClient(cliente);
         Swal.fire({
             icon: 'success',
             title: 'Cliente agregado',
             showConfirmButton: false,
             timer: 1500
           })
+          listClientes();
     }
+
+    /* async function ActualizarCliente() {
+        await updateClient(cliente);
+        Swal.fire({
+            icon: 'success',
+            title: 'Cliente agregado',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          listClientes();
+    } */
 
     function handleChange({target}) {
         setCliente({
@@ -70,8 +81,8 @@ function Clientes() {
             confirmButtonText: 'Si, eliminar!'
           }).then(async (result) => {
             if (result.isConfirmed) {
-                const res = await deleteClientById(id);
-                setListaClientes(listaClientes.filter(cliente=>cliente.id!=id))
+                await deleteClientById(id);
+                setListaClientes(listaClientes.filter(cliente=>cliente.id!==id))
 
               Swal.fire(
                 'Borrado!',
@@ -139,7 +150,7 @@ function Clientes() {
                 <div className="row">
                     <div className="col-12">
                         <button className="btn btn-block btn-warning mx-2" onClick={()=>guardarCliente()}>Agregar</button>
-                        <button className="btn btn-block btn-success mx-2">Actualizar</button>
+                        <button className="btn btn-block btn-success mx-2"/*  onClick={()=>ActualizarCliente()} */>Actualizar</button>
                     </div>
                 </div>
             </div>

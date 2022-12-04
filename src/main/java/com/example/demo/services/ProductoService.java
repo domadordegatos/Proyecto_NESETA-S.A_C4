@@ -15,17 +15,17 @@ public class ProductoService {
     @Autowired
     ProductoRepository productoRepository;
 
-    public Optional<ProductoModel> getpProductoById(String id){
+    public Optional<ProductoModel> getProductoById(String id){
         return productoRepository.findById(id);
     }
 
-    public Iterable<ProductoModel> getProductobyNombre(String nombre){
+    /* public Iterable<ProductoModel> getProductobyNombre(String nombre){
         return productoRepository.findByNombre(nombre);
-    }
+    } */
     
     public List<ProductoModel> getProductos() {
         List<ProductoModel> listaProductos= productoRepository.findAll();
-        listaProductos.sort(Comparator.comparing(ProductoModel::getNombre));
+        listaProductos.sort(Comparator.comparing(ProductoModel::getId));
         return listaProductos;
     }
 
