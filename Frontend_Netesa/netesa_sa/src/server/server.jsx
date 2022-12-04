@@ -1,4 +1,5 @@
 const API_URL_CLIENTES="http://localhost:8080/clientes/";
+const API_URL_PRODUCTOS="http://localhost:8080/productos/";
 
 
 export async function loadProductos(){
@@ -39,3 +40,25 @@ export async function loadFacturador(){
     const data = await res.json();
     return data;
 }
+
+/*======================PRODUCTOS=====================-========*/
+export async function findProductById(id){
+    const options = {method: 'GET'};
+    const res= await fetch(API_URL_PRODUCTOS+id,options);
+    return await res.json();
+}
+export async function deleteProductById(id){
+    const options = {method: 'DELETE'}; //cuando es metodo GET no es necesario especificarlo
+    const res= await fetch(API_URL_PRODUCTOS+id,options);
+    const text =await res.text();
+    return text;
+}
+export async function saveProduct(producto){
+    const options = {
+        method: 'POST',
+        headers:{"Content-type":"application/json"},
+        body: JSON.stringify(producto)
+      };
+      const response = await fetch(API_URL_PRODUCTOS, options);
+      return await response.text();  
+}  
