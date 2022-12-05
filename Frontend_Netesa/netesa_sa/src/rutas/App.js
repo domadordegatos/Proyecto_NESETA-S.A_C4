@@ -2,12 +2,12 @@ import '../App.css';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { NavBar } from '../componentes/NavBar';
 import { HomePage } from "../paginas/HomePage";
-import { ContactPage } from "../paginas/ContactoPage";
+import { ContactPage } from "../paginas/ContactPage";
 import { BlogPage } from '../paginas/BlogPage';
 import { NotFound } from '../paginas/NotFound';
-import { Productos } from '../paginas/Productos';
-import { Clientes } from '../paginas/Clientes';
-import { Facturadores } from '../paginas/Facturadores';
+import { Productos } from '../componentes/Productos';
+import { Clientes } from '../componentes/Clientes';
+import { Facturadores } from '../componentes/Facturadores';
 
 function App() {
   return (

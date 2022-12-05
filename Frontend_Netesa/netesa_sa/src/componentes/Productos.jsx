@@ -33,10 +33,7 @@ function Productos() {
   useEffect(
     () => {
       listProductos();
-    },
-    [
-      /* listProductos */
-    ]
+    },[]
   );
 
   function Editar(id) {
@@ -57,6 +54,9 @@ async function guardarProducto() {
       timer: 1500
     })
     listProductos();/* volver a cargar la tabla */
+    setTimeout(function(){
+      window.location.reload()
+  }, 2000);
 }
 
 function handleChange({target}) {
@@ -92,12 +92,12 @@ async function eliminar(id) {
 
 
   return (
-    <div className="contenedor d-flex">
+    <div className="contenedor d-flex  mt-3">
       <div className="secciones1 w-75 mx-4 ">
         <h3>Productos</h3>
         <Table className="table table-bordered table-sm">
           <thead>
-          <tr className="table-info">
+          <tr className="table-warning">
             <td>Nombre</td>
             <td>Precio</td>
             <td>Marca</td>
@@ -119,7 +119,7 @@ async function eliminar(id) {
               <td>{producto.fingreso}</td>
               <td>{producto.proveedor}</td>
               <td>
-                <Form.Select>
+                <Form.Select  size="sm">
                   {producto.disponibles.map((disponible) => (
                     <option value="">{disponible}</option>
                   ))}

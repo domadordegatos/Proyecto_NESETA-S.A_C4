@@ -48,6 +48,9 @@ function Clientes() {
             timer: 1500
           })
           listClientes();
+          setTimeout(function(){
+            window.location.reload()
+        }, 2000);
     }
 
     /* async function ActualizarCliente() {
@@ -95,7 +98,7 @@ function Clientes() {
 
 
     return (
-        <div className="contenedor d-flex">
+        <div className="contenedor d-flex mt-3">
 
             <div className="seccion1 w-25 mx-3">
                 <h3>Gestion de clientes</h3>
@@ -103,7 +106,7 @@ function Clientes() {
                     <div className="col-12">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Id</Form.Label>
-                            <Form.Control name="id" value={cliente.id} type="text" disabled onChange={handleChange} required />
+                            <Form.Control size="sm" name="id" value={cliente.id} type="text" disabled onChange={handleChange} required />
                         </Form.Group>
                     </div>
                 </div>
@@ -111,7 +114,7 @@ function Clientes() {
                     <div className="col-12">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Nombre</Form.Label>
-                            <Form.Control name="nombre" value={cliente.nombre} type="text" placeholder="nombre" onChange={handleChange} required />
+                            <Form.Control size="sm" name="nombre" value={cliente.nombre} type="text" placeholder="nombre" onChange={handleChange} required />
                         </Form.Group>
                     </div>
                 </div>
@@ -119,7 +122,7 @@ function Clientes() {
                     <div className="col-12">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Nit</Form.Label>
-                            <Form.Control name="nit" type="text" value={cliente.nit} placeholder="900....." onChange={handleChange} required />
+                            <Form.Control size="sm" name="nit" type="text" value={cliente.nit} placeholder="900....." onChange={handleChange} required />
                         </Form.Group>
                     </div>
                 </div>
@@ -127,7 +130,7 @@ function Clientes() {
                     <div className="col-12">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Celular</Form.Label>
-                            <Form.Control name="celular" type="text" value={cliente.celular} placeholder="300..." onChange={handleChange} required />
+                            <Form.Control size="sm" name="celular" type="text" value={cliente.celular} placeholder="300..." onChange={handleChange} required />
                         </Form.Group>
                     </div>
                 </div>
@@ -135,7 +138,7 @@ function Clientes() {
                     <div className="col-12">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Correo</Form.Label>
-                            <Form.Control name="correo" type="text" value={cliente.correo} placeholder="a@a.com" onChange={handleChange} required />
+                            <Form.Control size="sm" name="correo" type="text" value={cliente.correo} placeholder="a@a.com" onChange={handleChange} required />
                         </Form.Group>
                     </div>
                 </div>
@@ -143,14 +146,14 @@ function Clientes() {
                     <div className="col-12">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Dirección</Form.Label>
-                            <Form.Control name="direccion" type="text" value={cliente.direccion} placeholder="cll...." onChange={handleChange} required />
+                            <Form.Control size="sm" name="direccion" type="text" value={cliente.direccion} placeholder="cll...." onChange={handleChange} required />
                         </Form.Group>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12">
-                        <button className="btn btn-block btn-warning mx-2" onClick={()=>guardarCliente()}>Agregar</button>
-                        <button className="btn btn-block btn-success mx-2"/*  onClick={()=>ActualizarCliente()} */>Actualizar</button>
+                    <div className="col-12 d-grid gap-1">
+                        <button size="sm" className="btn btn-block btn-warning mx-2" onClick={()=>guardarCliente()}>Agregar</button>
+                        <button size="sm" className="btn btn-block btn-success mx-2"/*  onClick={()=>ActualizarCliente()} */>Actualizar</button>
                     </div>
                 </div>
             </div>
