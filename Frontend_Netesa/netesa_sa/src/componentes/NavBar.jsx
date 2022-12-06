@@ -19,9 +19,7 @@ function NavBar() {
                         <NavDropdown.Item><NavLink className="nav-link text-dark" to="/productos">Productos</NavLink></NavDropdown.Item>
                         <NavDropdown.Item><NavLink className="nav-link text-dark" to="/clientes">Clientes</NavLink></NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">
-                            Facturas
-                        </NavDropdown.Item>
+                        <NavDropdown.Item><NavLink className="nav-link text-dark" to="/facturacion">Facturacion</NavLink></NavDropdown.Item>
                     </NavDropdown>
 
                     <li className="nav-item">

@@ -119,15 +119,13 @@ function Clientes() {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12">
+                    <div className="col-6">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Nit</Form.Label>
                             <Form.Control size="sm" name="nit" type="text" value={cliente.nit} placeholder="900....." onChange={handleChange} required />
                         </Form.Group>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col-12">
+                    <div className="col-6">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Celular</Form.Label>
                             <Form.Control size="sm" name="celular" type="text" value={cliente.celular} placeholder="300..." onChange={handleChange} required />

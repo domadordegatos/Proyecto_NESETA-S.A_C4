@@ -172,13 +172,13 @@ async function eliminar(id) {
         <h3>Gestion de Productos</h3>
         <div className="row">
           <div className="col-6">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Id</Form.Label>
               <Form.Control size="sm" name="id" value={producto.id} type="text" disabled onChange={handleChange} required />
             </Form.Group>
           </div>
           <div className="col-6">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Iva</Form.Label>
               <Form.Select  size="sm" name="iva" onChange={handleChange} value={producto.iva} aria-label="Default select example">
                 <option value="A" selected>Seleccionar..</option>
@@ -190,7 +190,7 @@ async function eliminar(id) {
         </div>
         <div className="row">
           <div className="col-12">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Nombre</Form.Label>
               <Form.Control  size="sm" name="nombre" value={producto.nombre} type="text" placeholder="nombre" onChange={handleChange} required />
             </Form.Group>
@@ -198,7 +198,7 @@ async function eliminar(id) {
         </div>
         <div className="row">
           <div className="col-12">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Precio</Form.Label>
               <Form.Control  size="sm" name="precio" value={producto.precio} type="number" placeholder="$000..." onChange={handleChange} required />
             </Form.Group>
@@ -206,13 +206,13 @@ async function eliminar(id) {
         </div>
         <div className="row">
           <div className="col-6">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Marca</Form.Label>
               <Form.Control  size="sm" name="marca" value={producto.marca} type="text" placeholder="gao..." onChange={handleChange} required />
             </Form.Group>
           </div>
           <div className="col-6">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Referencia</Form.Label>
               <Form.Control  size="sm" name="referencia" value={producto.referencia} type="text" placeholder="tipo..." onChange={handleChange} required/>
             </Form.Group>
@@ -220,7 +220,7 @@ async function eliminar(id) {
         </div>
         <div className="row">
           <div className="col-12">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Color</Form.Label>
               <Form.Control  size="sm" name="color" value={producto.color} type="text" placeholder="Red..." onChange={handleChange} required />
             </Form.Group>
@@ -228,13 +228,13 @@ async function eliminar(id) {
         </div>
         <div className="row">
           <div className="col-5">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Fecha Ingreso</Form.Label>
               <Form.Control  size="sm" name="fingreso" id="date" value={producto.fingreso} type="date" placeholder="2022..." onChange={handleChange} required/>
             </Form.Group>
           </div>
           <div className="col-7">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Proveedor</Form.Label>
               <Form.Control  size="sm" name="proveedor" value={producto.proveedor} type="text" placeholder="norma..." onChange={handleChange} required/>
             </Form.Group>
@@ -242,7 +242,7 @@ async function eliminar(id) {
         </div>
         <div className="row">
           <div className="col-12">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3">
               <Form.Label>Tipo</Form.Label>
               <Form.Control  size="sm" name="disponibles" value={producto.disponibles} type="text" placeholder="tipo..." onChange={handleChange} required/>
             </Form.Group>

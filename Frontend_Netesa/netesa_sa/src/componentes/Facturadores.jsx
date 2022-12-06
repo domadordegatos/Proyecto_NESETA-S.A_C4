@@ -105,7 +105,7 @@ function Facturadores() {
                 <h3>Gestion de Usuarios</h3>
                 <div className="row">
                     <div className="col-12">
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Nombre</Form.Label>
                             <Form.Control onChange={handleChange} required  name="nombre" value={facturador.nombre} size="sm" type="text" placeholder="nombre" />
                         </Form.Group>
@@ -113,13 +113,13 @@ function Facturadores() {
                 </div>
                 <div className="row">
                     <div className="col-6">
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Telefono</Form.Label>
                             <Form.Control onChange={handleChange} required  name="telefono" value={facturador.telefono}  size="sm" type="number" placeholder="300...." />
                         </Form.Group>
                     </div>
                     <div className="col-6">
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Id</Form.Label>
                             <Form.Control disabled onChange={handleChange} name="id" value={facturador.id}  size="sm" type="text"/>
                         </Form.Group>
@@ -127,7 +127,7 @@ function Facturadores() {
                 </div>
                 <div className="row">
                     <div className="col-12">
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Correo</Form.Label>
                             <Form.Control onChange={handleChange} required  name="correo" value={facturador.correo} size="sm" type="email" placeholder="a@a...." />
                         </Form.Group>
@@ -135,7 +135,7 @@ function Facturadores() {
                 </div>
                 <div className="row">
                     <div className="col-12">
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Usuario</Form.Label>
                             <Form.Control onChange={handleChange} required  name="usuario" value={facturador.usuario} size="sm" type="text" placeholder="user...." />
                         </Form.Group>
@@ -143,7 +143,7 @@ function Facturadores() {
                 </div>
                 <div className="row">
                     <div className="col-12">
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Contraseña</Form.Label>
                             <Form.Control onChange={handleChange} required  name="contraseña" value={facturador.contraseña} size="sm" type="password" placeholder="****" />
                         </Form.Group>
@@ -151,7 +151,7 @@ function Facturadores() {
                 </div>
                 <div className="row">
                     <div className="col-6">
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label>Rol</Form.Label>
                             <Form.Select onChange={handleChange} required  name="rol" value={facturador.rol} size="sm">
                                 <option value="Admin">Admin</option>
@@ -160,7 +160,7 @@ function Facturadores() {
                     </Form.Group>
                 </div>
                 <div className="col-6">
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3">
                         <Form.Label>Estado</Form.Label>
                         <Form.Select onChange={handleChange} required  name="estado" value={facturador.estado} size="sm">
                                 <option value="Activo">Activo</option>
