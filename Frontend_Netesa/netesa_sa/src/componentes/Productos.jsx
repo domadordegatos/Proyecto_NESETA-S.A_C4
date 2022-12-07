@@ -121,7 +121,7 @@ async function eliminar(id) {
               <td>
                 <Form.Select  size="sm">
                   {producto.disponibles.map((disponible) => (
-                    <option value="">{disponible}</option>
+                    <option key={disponible} value="">{disponible}</option>
                   ))}
                 </Form.Select>
               </td>
