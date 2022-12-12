@@ -43,8 +43,8 @@ public class ProductoController {
         return productoService.deleteProductoById(id);
     }
 
-    /* @GetMapping(path = "/{nombre}")
+    @GetMapping(path = "name/{nombre}")
     public Iterable<ProductoModel> buscarPorNombre(@PathVariable("nombre")String nombre){
         return productoService.getProductobyNombre(nombre);
-    } */
+    }
 }

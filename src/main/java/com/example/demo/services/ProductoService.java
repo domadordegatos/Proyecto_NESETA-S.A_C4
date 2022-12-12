@@ -19,9 +19,9 @@ public class ProductoService {
         return productoRepository.findById(id);
     }
 
-    /* public Iterable<ProductoModel> getProductobyNombre(String nombre){
+    public Iterable<ProductoModel> getProductobyNombre(String nombre){
         return productoRepository.findByNombre(nombre);
-    } */
+    }
     
     public List<ProductoModel> getProductos() {
         List<ProductoModel> listaProductos= productoRepository.findAll();

@@ -8,5 +8,5 @@ import com.example.demo.models.ProductoModel;
 @Repository
 public interface ProductoRepository extends MongoRepository<ProductoModel, String>{
     
-    /* Iterable<ProductoModel> findByNombre(String nombre); */
+    Iterable<ProductoModel> findByNombre(String nombre);
 }
